@@ -1,0 +1,13 @@
+RewriteEngine on
+
+RewriteRule ^index$  index.php [L,QSA]
+RewriteRule ^columns$  columns.php [L,QSA]
+RewriteRule ^writers$  writers.php [L,QSA]
+RewriteRule ^photoGalleries$  photoGalleries.php [L,QSA]
+
+
+RewriteRule ^news/([0-9]+)$  news.php?id=$1 [L,QSA]
+RewriteRule ^category/([a-z]+)$  category.php?category=$1 [L,QSA]
+RewriteRule ^column/([0-9]+)/writer/([0-9a-zA-Z-_]+)$  column.php?id=$1&writer=$2 [L,QSA]
+RewriteRule ^writer/([0-9a-zA-Z-_]+)$  writer.php?id=$1 [L,QSA]
+RewriteRule ^photoGallery/([0-9]+)$  photoGallery.php?id=$1 [L,QSA]
